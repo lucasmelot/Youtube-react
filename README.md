@@ -1,16 +1,118 @@
-# React + Vite
+# 📺 YouTube Channel Stats
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto simples desenvolvido com React.js + Vite consumindo a API do YouTube para exibir informações de canais em tempo real.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* 👥 Número de inscritos
+* 👀 Total de visualizações
+* 🎥 Quantidade de vídeos do canal
 
-## React Compiler
+## 🛠️ Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React.js
+* Vite
+* JavaScript
+* CSS3
+* YouTube Data API v3
 
-## Expanding the ESLint configuration
+## ⚙️ Como executar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+# Clone o repositório
+git clone <url-do-repositorio>
+
+# Entre na pasta
+cd nome-do-projeto
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
+```
+
+Depois disso, abra o navegador no endereço mostrado pelo Vite.
+
+## 🔑 Configuração
+
+Adicione sua API Key do YouTube no projeto e informe o ID do canal que deseja consultar.
+
+## 📚 Aprendizados
+
+Esse projeto foi criado para praticar:
+
+* Consumo de APIs
+* React Hooks
+* useState
+* useEffect
+* fetch()
+* Manipulação de estados
+* JSON
+
+## 🔒 Segurança
+
+A API Key utilizada foi restringida no Google Cloud para maior segurança.
+
+## 👨‍💻 Autor
+
+Lucas
+# 📺 YouTube Channel Stats
+
+Projeto simples desenvolvido com React.js + Vite consumindo a API do YouTube para exibir informações de canais em tempo real.
+
+## 🚀 Funcionalidades
+
+* 👥 Número de inscritos
+* 👀 Total de visualizações
+* 🎥 Quantidade de vídeos do canal
+
+## 🛠️ Tecnologias
+
+* React.js
+* Vite
+* JavaScript
+* CSS3
+* YouTube Data API v3
+
+## ⚙️ Como executar
+
+```bash
+# Clone o repositório
+git clone <url-do-repositorio>
+
+# Entre na pasta
+cd nome-do-projeto
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
+```
+
+Depois disso, abra o navegador no endereço mostrado pelo Vite.
+
+## 🔑 Configuração
+
+Adicione sua API Key do YouTube no projeto e informe o ID do canal que deseja consultar.
+
+## 📚 Aprendizados
+
+Esse projeto foi criado para praticar:
+
+* Consumo de APIs
+* React Hooks
+* useState
+* useEffect
+* fetch()
+* Manipulação de estados
+* JSON
+
+## 🔒 Segurança
+
+A API Key utilizada foi restringida no Google Cloud para maior segurança.
+
+## 👨‍💻 Autor
+
+Lucas
