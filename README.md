@@ -74,7 +74,7 @@ Após iniciar, o Vite irá disponibilizar um endereço local (geralmente `http:/
 
 Este projeto foi desenvolvido com foco educacional, servindo para solidificar conceitos práticos como:
 
-* **Consumo Assíncrono de APIs:** Utilização do método nativo `fetch()` com estruturas `async/await`.
+* **Consumo Assíncrono de APIs:** Utilização do método nativo `fetch()`.
 * **React Hooks:** Gerenciamento de ciclo de vida e efeitos colaterais com `useEffect` e controle de dados dinâmicos com `useState`.
 * **Manipulação de Estados:** Fluxo de dados e renderização condicional baseada na resposta de requisições JSON.
 
@@ -83,7 +83,5 @@ Este projeto foi desenvolvido com foco educacional, servindo para solidificar co
 ## 👨‍💻 Autor
 
 Desenvolvido com ☕ por **Lucas**.
-
-```
 
 ```
