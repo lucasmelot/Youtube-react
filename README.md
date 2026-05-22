@@ -1,118 +1,89 @@
 # 📺 YouTube Channel Stats
 
-Projeto simples desenvolvido com React.js + Vite consumindo a API do YouTube para exibir informações de canais em tempo real.
+Uma aplicação web simples e responsiva desenvolvida em React.js + Vite que consome a API do YouTube para exibir métricas e informações de canais em tempo real.
+
+---
+
+## 📸 Preview do Projeto
+
+Abaixo você pode conferir a interface principal do projeto exibindo os dados carregados dinamicamente:
+
+![Demonstração do YouTube Channel Stats](src/assets/youtubereact.png)
+
+---
 
 ## 🚀 Funcionalidades
 
-* 👥 Número de inscritos
-* 👀 Total de visualizações
-* 🎥 Quantidade de vídeos do canal
+* 👥 **Contador de inscritos** atualizado em tempo real.
+* 👀 **Total de visualizações** acumuladas pelo canal.
+* 🎥 **Contagem total de vídeos** públicos publicados.
+* 🔍 **Busca customizada** inserindo o ID do canal desejado.
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias Utilizadas
 
-* React.js
-* Vite
-* JavaScript
-* CSS3
-* YouTube Data API v3
+O ecossistema do projeto conta com as seguintes ferramentas:
 
-## ⚙️ Como executar
+* [React.js](https://reactjs.org/) — Biblioteca para construção de interfaces.
+* [Vite](https://vitejs.dev/) — Bundler rápido e moderno para o ecossistema frontend.
+* [JavaScript (ES6+)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) — Linguagem de programação.
+* [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS) — Estilização moderna e layout responsivo.
+* [YouTube Data API v3](https://developers.google.com/youtube/v3) — API oficial da Google para consulta de dados.
 
-```bash
-# Clone o repositório
-git clone <url-do-repositorio>
+---
 
-# Entre na pasta
-cd nome-do-projeto
+## 🔑 Configuração das Credenciais
 
-# Instale as dependências
-npm install
+Para que o projeto funcione corretamente, você precisará de uma chave de API do Google Cloud Console.
 
-# Rode o projeto
-npm run dev
+1. Crie um arquivo `.env` na raiz do seu projeto.
+2. Adicione sua chave da API do YouTube seguindo o padrão do Vite:
+
+```env
+VITE_YOUTUBE_API_KEY=SUA_CHAVE_AQUI
+
 ```
 
-Depois disso, abra o navegador no endereço mostrado pelo Vite.
+> 🔒 **Nota de Segurança:** A API Key utilizada foi devidamente restringida no painel do Google Cloud (HTTP referrers / restrições de API) para prevenir uso indevido por terceiros.
 
-## 🔑 Configuração
+---
 
-Adicione sua API Key do YouTube no projeto e informe o ID do canal que deseja consultar.
+## ⚙️ Como Executar o Projeto
 
-## 📚 Aprendizados
+Siga os passos abaixo para rodar a aplicação localmente:
 
-Esse projeto foi criado para praticar:
+```bash
+# 1. Clone o repositório
+git clone <url-do-repositorio>
 
-* Consumo de APIs
-* React Hooks
-* useState
-* useEffect
-* fetch()
-* Manipulação de estados
-* JSON
+# 2. Acesse o diretório do projeto
+cd nome-do-projeto
 
-## 🔒 Segurança
+# 3. Instale todas as dependências necessárias
+npm install
 
-A API Key utilizada foi restringida no Google Cloud para maior segurança.
+# 4. Inicie o servidor de desenvolvimento
+npm run dev
+
+```
+
+Após iniciar, o Vite irá disponibilizar um endereço local (geralmente `http://localhost:5173`). Abra-o no seu navegador de preferência.
+
+---
+
+## 📚 Aprendizados Obtidos
+
+Este projeto foi desenvolvido com foco educacional, servindo para solidificar conceitos práticos como:
+
+* **Consumo Assíncrono de APIs:** Utilização do método nativo `fetch()` com estruturas `async/await`.
+* **React Hooks:** Gerenciamento de ciclo de vida e efeitos colaterais com `useEffect` e controle de dados dinâmicos com `useState`.
+* **Manipulação de Estados:** Fluxo de dados e renderização condicional baseada na resposta de requisições JSON.
+
+---
 
 ## 👨‍💻 Autor
 
-Lucas
-# 📺 YouTube Channel Stats
+Desenvolvido com ☕ por **Lucas**.
 
-Projeto simples desenvolvido com React.js + Vite consumindo a API do YouTube para exibir informações de canais em tempo real.
-
-## 🚀 Funcionalidades
-
-* 👥 Número de inscritos
-* 👀 Total de visualizações
-* 🎥 Quantidade de vídeos do canal
-
-## 🛠️ Tecnologias
-
-* React.js
-* Vite
-* JavaScript
-* CSS3
-* YouTube Data API v3
-
-## ⚙️ Como executar
-
-```bash
-# Clone o repositório
-git clone <url-do-repositorio>
-
-# Entre na pasta
-cd nome-do-projeto
-
-# Instale as dependências
-npm install
-
-# Rode o projeto
-npm run dev
 ```
 
-Depois disso, abra o navegador no endereço mostrado pelo Vite.
-
-## 🔑 Configuração
-
-Adicione sua API Key do YouTube no projeto e informe o ID do canal que deseja consultar.
-
-## 📚 Aprendizados
-
-Esse projeto foi criado para praticar:
-
-* Consumo de APIs
-* React Hooks
-* useState
-* useEffect
-* fetch()
-* Manipulação de estados
-* JSON
-
-## 🔒 Segurança
-
-A API Key utilizada foi restringida no Google Cloud para maior segurança.
-
-## 👨‍💻 Autor
-
-Lucas
+```

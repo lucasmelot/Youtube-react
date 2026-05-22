@@ -1,23 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-:root{
-    --bg-primary: #0f1115;
-    --bg-secondary: #171a21;
-    --card-bg: rgba(255,255,255,0.04);
+:root {
+    /* Paleta Clean - YouTube Light Mode Avançado */
+    --bg-primary: #f9f9f9;       /* Fundo claro oficial do YouTube */
+    --bg-secondary: #ffffff;     /* Branco puro para o container e cards */
+    
+    --border-card: #eeeeee;      /* Borda sutil para dar forma aos cards brancos */
+    --border-container: #e8e8e8; /* Borda do painel principal */
+    --border-hover: #ff0000;     /* Vermelho icônico do YT no hover */
 
-    --border: rgba(255,255,255,0.08);
+    --text-primary: #0f0f0f;     /* Preto quase puro para títulos e valores */
+    --text-secondary: #606060;   /* Cinza focado para legendas (padrão YT) */
 
-    --text-primary: #ffffff;
-    --text-secondary: #9ca3af;
-
-    --youtube: #ff0033;
-
-    --shadow:
-    0 10px 30px rgba(0,0,0,0.35),
-    0 0 80px rgba(255,0,51,0.08);
-
-    --glass:
-    blur(18px);
+    --youtube-red: #ff0000;      /* Vermelho puro oficial do YouTube */
+    
+    --shadow-container: 
+    0 20px 40px rgba(0, 0, 0, 0.04),
+    0 1px 5px rgba(0, 0, 0, 0.02);
+    
+    --shadow-card-hover: 
+    0 10px 20px rgba(255, 0, 0, 0.04),
+    0 2px 6px rgba(0, 0, 0, 0.02);
 }
 
 *{
@@ -26,306 +29,171 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     min-height: 100vh;
-
     font-family: 'Inter', sans-serif;
-
-    background:
-    radial-gradient(circle at top left, rgba(255,0,51,0.18), transparent 25%),
-    radial-gradient(circle at bottom right, rgba(255,255,255,0.05), transparent 30%),
-    linear-gradient(135deg, #0b0d11, #12151d);
+    
+    /* Background atualizado: Mistura de malha de pontos minimalista com aura vermelha */
+    background-color: var(--bg-primary);
+    background-image: 
+        radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 50% 50%, rgba(255, 0, 0, 0.04), transparent 50%);
+    background-size: 24px 24px, 100% 100%;
+    background-attachment: fixed;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
     overflow: hidden;
-
     position: relative;
 }
 
-/* Glow animado fundo */
-
-body::before{
+/* Brilho vermelho de fundo poligonal/suave para profundidade */
+body::before {
     content: '';
-
     position: absolute;
-
-    width: 600px;
-    height: 600px;
-
-    background: radial-gradient(circle, rgba(255,0,51,0.12), transparent 70%);
-
-    top: -200px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.03) 0%, transparent 70%);
+    top: -300px;
     left: -200px;
-
-    animation: floatGlow 8s ease-in-out infinite;
+    pointer-events: none;
+    animation: floatGlow 12s ease-in-out infinite;
 }
 
-body::after{
-    content: '';
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    background: radial-gradient(circle, rgba(255,255,255,0.05), transparent 70%);
-
-    bottom: -200px;
-    right: -150px;
-
-    animation: floatGlow2 10s ease-in-out infinite;
+@keyframes floatGlow {
+    0%, 100% { transform: translate(0px, 0px); }
+    50% { transform: translate(30px, 15px); }
 }
 
-@keyframes floatGlow{
-    0%{
-        transform: translateY(0px);
-    }
-
-    50%{
-        transform: translateY(30px);
-    }
-
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-@keyframes floatGlow2{
-    0%{
-        transform: translateY(0px);
-    }
-
-    50%{
-        transform: translateY(-25px);
-    }
-
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-.container{
+.container {
     width: 430px;
-
-    padding: 38px;
-
-    border-radius: 32px;
-
-    background: rgba(255,255,255,0.05);
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter: var(--glass);
-
-    box-shadow: var(--shadow);
-
+    padding: 40px 35px;
+    border-radius: 24px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-container);
+    box-shadow: var(--shadow-container);
     position: relative;
-
     overflow: hidden;
-
     z-index: 10;
 }
 
-/* Linha premium topo */
-
-.container::before{
+/* Linha premium no topo - Vermelho Puro YouTube */
+.container::before {
     content: '';
-
     position: absolute;
-
     top: 0;
     left: 0;
-
     width: 100%;
-    height: 5px;
-
-    background:
-    linear-gradient(
+    height: 4px;
+    background: linear-gradient(
         90deg,
-        #ff0033,
-        #ff4d6d,
-        #ffffff,
-        #ff0033
+        #ff0000,
+        #ff4d4d,
+        #ff0000
     );
-
-    background-size: 300%;
-
-    animation: gradientMove 5s linear infinite;
+    background-size: 200%;
+    animation: gradientMove 4s linear infinite;
 }
 
-@keyframes gradientMove{
-    0%{
-        background-position: 0%;
-    }
-
-    100%{
-        background-position: 300%;
-    }
+@keyframes gradientMove {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
 }
 
-h1{
+h1 {
     color: var(--text-primary);
-
     text-align: center;
-
-    font-size: 2.3rem;
-
+    font-size: 2.2rem;
     font-weight: 800;
-
     letter-spacing: -1px;
-
     margin-bottom: 35px;
-
-    position: relative;
 }
 
-/* Glow no título */
-
-h1::after{
-    content: '';
-
-    position: absolute;
-
-    width: 120px;
-    height: 14px;
-
-    background: rgba(255,0,51,0.3);
-
-    filter: blur(18px);
-
-    left: 50%;
-    transform: translateX(-50%);
-
-    bottom: -10px;
-}
-
-.info{
+.info {
     position: relative;
-
-    background: var(--card-bg);
-
-    border: 1px solid var(--border);
-
-    border-radius: 22px;
-
-    padding: 22px;
-
-    margin-bottom: 20px;
-
+    background: #ffffff;
+    /* Adicionada borda clara fixa para os cards não sumirem no fundo branco */
+    border: 1px solid var(--border-card);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     overflow: hidden;
-
     transition:
-    transform 0.35s ease,
-    border 0.35s ease,
-    box-shadow 0.35s ease;
+        transform 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-/* brilho interno */
-
-.info::before{
+/* Efeito de brilho reflexivo (shimmer) sutil ao passar o mouse */
+.info::before {
     content: '';
-
     position: absolute;
-
     top: 0;
     left: -120%;
-
-    width: 80%;
+    width: 70%;
     height: 100%;
-
-    background:
-    linear-gradient(
+    background: linear-gradient(
         120deg,
         transparent,
-        rgba(255,255,255,0.12),
+        rgba(255, 0, 0, 0.02),
+        rgba(255, 255, 255, 0.8),
         transparent
     );
-
-    transform: skewX(-25deg);
-
-    transition: 0.8s;
+    transform: skewX(-20deg);
+    transition: 0.7s;
 }
 
-.info:hover::before{
+.info:hover::before {
     left: 150%;
 }
 
-.info:hover{
-    transform: translateY(-6px) scale(1.02);
-
-    border-color: rgba(255,0,51,0.5);
-
-    box-shadow:
-    0 12px 30px rgba(0,0,0,0.35),
-    0 0 30px rgba(255,0,51,0.12);
+.info:hover {
+    transform: translateY(-3px);
+    /* Transição suave para a borda vermelha clássica */
+    border-color: rgba(255, 0, 0, 0.4);
+    box-shadow: var(--shadow-card-hover);
 }
 
-.label{
+.label {
     color: var(--text-secondary);
-
-    font-size: 1rem;
-
-    font-weight: 500;
-
-    letter-spacing: 0.3px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.1px;
 }
 
-.valor{
-    color: white;
-
-    font-size: 1.4rem;
-
+.valor {
+    color: var(--text-primary);
+    font-size: 1.5rem;
     font-weight: 800;
-
     letter-spacing: -0.5px;
-
-    position: relative;
 }
 
-/* Glow nos números */
-
-.valor::after{
-    content: '';
-
-    position: absolute;
-
-    width: 100%;
-    height: 100%;
-
-    left: 0;
-    top: 0;
-
-    color: #ff0033;
-
-    filter: blur(12px);
-
-    opacity: 0.4;
-
-    z-index: -1;
+.info:last-child {
+    margin-bottom: 0;
 }
 
-/* Responsivo */
-
+/* Responsividade */
 @media(max-width: 500px){
-
-    .container{
+    .container {
         width: 92%;
-        padding: 28px;
+        padding: 30px 22px;
     }
 
-    h1{
+    h1 {
         font-size: 1.8rem;
+        margin-bottom: 25px;
     }
 
-    .valor{
-        font-size: 1.1rem;
+    .info {
+        padding: 16px 20px;
+        border-radius: 12px;
     }
 
+    .valor {
+        font-size: 1.25rem;
+    }
 }
