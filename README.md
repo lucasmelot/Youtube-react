@@ -83,5 +83,3 @@ Este projeto foi desenvolvido com foco educacional, servindo para solidificar co
 ## 👨‍💻 Autor
 
 Desenvolvido com ☕ por **Lucas**.
-
-```
